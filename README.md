@@ -2,24 +2,6 @@
 
 Este proyecto implementa una **API en FastAPI** que permite encontrar la mejor conversión entre monedas dentro del exchange **Buda.com**, considerando conversiones vía criptomonedas intermediarias.
 
-## 📁 Estructura del proyecto
-
-```
-conversion_currencies_tryout/
-├── app/
-│   ├── __init__.py
-│   ├── main.py              # Aplicación FastAPI
-│   ├── client.py            # Cliente para obtener datos de Buda (real o mock)
-│   ├── conversion.py        # Lógica de simulación y búsqueda de mejor conversión
-│   └── schemas.py           # Modelos Pydantic para request/response
-├── tests/
-│   ├── __init__.py
-│   ├── test_buda_client.py       # Tests unitarios y de integración (pytest)
-│   ├── test_conversion_logic.py 
-├── dockerfile  
-└── README.md
-```
-
 ---
 
 ## 🧠 Descripción general
