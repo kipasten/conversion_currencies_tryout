@@ -5,7 +5,7 @@ Este proyecto implementa una **API en FastAPI** que permite encontrar la mejor c
 ## 📁 Estructura del proyecto
 
 ```
-buda_conversion_api/
+conversion_currencies_tryout/
 ├── app/
 │   ├── __init__.py
 │   ├── main.py              # Aplicación FastAPI
@@ -14,7 +14,9 @@ buda_conversion_api/
 │   └── schemas.py           # Modelos Pydantic para request/response
 ├── tests/
 │   ├── __init__.py
-│   ├── test_conversion.py   # Tests unitarios y de integración (pytest)
+│   ├── test_buda_client.py       # Tests unitarios y de integración (pytest)
+│   ├── test_conversion_logic.py 
+├── dockerfile  
 └── README.md
 ```
 
@@ -64,12 +66,24 @@ Modelos Pydantic que definen la estructura de entrada y salida de la API.
 
 ## 🚀 Ejecución
 
-### Instalar dependencias
+
+### Con Docker 🐋
+🧩 1. Reconstruye la imagen
+```bash
+docker build --no-cache -t conversion_currencies .
+```
+🧩 2. Ejecuta el contenedor
+```bash
+docker run -d -p 8000:8000 --name buda-api conversion_currencies
+```
+
+### Local
+#### Instalar dependencias
 ```bash
 pip install fastapi uvicorn pydantic pytest
 ```
 
-### Ejecutar el servidor local
+#### Ejecutar el servidor local
 ```bash
 uvicorn app.main:app --reload
 ```
